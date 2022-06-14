@@ -9,18 +9,44 @@ body {
     font-family: lato, sans-serif;
 }
 
+/* got this font from https://www.cdnfonts.com/georgia.font */
+@import url('http://fonts.cdnfonts.com/css/georgia');
+/* got this font from Adobe, https://fonts.adobe.com/my_fonts#web_projects-section */
+@import url("https://use.typekit.net/kjs0loc.css");
+
+:root {
+  /* fonts */
+  --font-heading1: "Bree", Arial, serif;
+  --font-body: "Georgia", Arial, sans-serif;
+  --font-menu-item: Arial, sans-serif;
+
+  /* colors */
+  --color-donker: #000000;
+  --color-blauw-donker: #031625;
+  --color-grijs-donker: #525252;
+  --color-grijs-licht: #7b7b7b;
+  --color-grijs-tint: #e5e4e4;
+  --color-wit: #ffffff;
+  --color-groen: #bbd981;
+  --color-groen-fel: #22C181;
+  --color-rood: #df5b57;
+}
+
 /* .noscroll {
     overflow-y: hidden; 
 } */
 
 h1 {
-    font-size: 3em;
+    font-size: 36px;
+    line-height: 53px;
+    margin-top: 3em;
     color: var(--color-donker);
+    font-family: var(--font-heading1);
 }
 
 h2 {
     font-size: 2em;
-    padding-bottom: 20px;
+    margin: 36px 0;
     color: var(--color-donker);
 }
 
@@ -28,18 +54,82 @@ a {
     text-decoration: none;
 }
 
+p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 32px;
+}
+
 a:hover {
     text-decoration: underline;
+}
+
+.page {
+  max-width: 30em;
+  margin: auto;
+  overflow: hidden;
+}
+
+.alignmentLeft {
+  width: 70%;
+  float: left;
+  background-color: var(--color-groen-fel);
+  height: 100vh;
+}
+
+.alignmentRight {
+  width: 30%;
+  float: right;
+  background-color: var(--color-wit);
+  height: 100vh;
+  overflow:auto;
+}
+
+/* ------------------------ navigatie  */
+
+nav {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-content: center; 
+  justify-content: space-between;
+  height: 64px;
+  background-color: var(--color-donker);
+}
+
+nav a {
+  color: var(--color-wit);
+  margin: auto 3em auto 0;
+  font-family: var(--font-menu-item);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+nav p {
+  margin: auto 0;
+}
+
+nav a:hover {
+  color: var(--color-rood);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav img {
+  height: 34px;
+  margin: auto 0 auto 3em;
+  color: green;
 }
 
 /* ------------------------ index.html ------------------------------ */
 
 .dismiss {
-    display: flex;
+    display: block;
     flex-direction: row;
     color: var(--color-wit);
-    background-color: var(--color-donker);
-    padding: 2em;
+    background-color: var(--color-grijs-donker);
+    height: 54px;
     align-items: center;
     justify-content: center;
 }
@@ -50,23 +140,43 @@ a:hover {
 }
 
 .dismiss a:active {
-    color: var(--color-wit);
-	display: none;
+  color: var(--color-wit);
 }
 
-iframe {
-    width: 80vw;
-    height: 80vh;
-    margin: 10px 40px;
-    border-radius: 20px;
+.hideBlock {
+  display: none;
+  color: red;
 }
 
-.pages {
-    display: flex;
-    flex-direction: row;
-    align-content: center; 
-    justify-content: space-between;
-    margin: 2rem 80px;
+.spline_homescreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#startDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#startKnop {
+  position: absolute;
+  bottom: 10em;
+}
+
+.spline-watermark {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* ------------------------ scenes ------------------------------ */
+
+.textScene li {
+  margin: 3em;
+  list-style-type: none;
+}
+
+.textScene ol {
+  margin-top: 10em;
 }
 
 /* ------------------------ credits.html ------------------------------ */
@@ -75,6 +185,11 @@ iframe {
     background-color: var(--color-wit);
     width: 64.81%;
     margin: 5rem auto 0 auto;
+    padding: 64px;
+}
+
+.paragraph details {
+    margin: 16px;
 }
 
 .details_disabled {
@@ -82,26 +197,4 @@ iframe {
     cursor: not-allowed;
     pointer-events: none;
     text-decoration: none;
-}
-
-/* ------------------------------------------------------ */
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Nunito+Sans:300,300i,400,400i,600,600i,700,700i&display=swap");
-
-:root {
-    --font-1: "Nunito Sans", sans-serif;
-    --font-2: "Montserrat", sans-serif;
-
-    /* monospace
-     */
-    --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
-
-    /* colors */
-    --color-donker: #031625;
-    --color-grijs-donker: #525252;
-    --color-grijs-licht: #7b7b7b;
-    --color-grijs-tint: #e5e4e4;
-    --color-wit: #ffffff;
-    --color-groen: #bbd981;
-    --color-rood: #df5b57;
 }
