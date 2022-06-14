@@ -9,14 +9,15 @@ body {
     font-family: lato, sans-serif;
 }
 
-/* got this font from https://www.cdnfonts.com/georgia.font */
+/* Font: Georgoa, got this font from https://www.cdnfonts.com/georgia.font */
 @import url('http://fonts.cdnfonts.com/css/georgia');
-/* got this font from Adobe, https://fonts.adobe.com/my_fonts#web_projects-section */
+/* Font: Bree, got this font from Adobe, https://fonts.adobe.com/my_fonts#web_projects-section */
 @import url("https://use.typekit.net/kjs0loc.css");
 
 :root {
   /* fonts */
   --font-heading1: "Bree", Arial, serif;
+  --font-heading2: "Bree", Arial, serif;
   --font-body: "Georgia", Arial, sans-serif;
   --font-menu-item: Arial, sans-serif;
 
@@ -45,9 +46,12 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
-    margin: 36px 0;
+    font-size: 32px;
+    line-height: 47px;
+    font-weight: 400;
+    margin-top: 36px;
     color: var(--color-donker);
+    font-family: var(--font-heading2);
 }
 
 a {
@@ -183,8 +187,8 @@ nav img {
 
 .paragraph {
     background-color: var(--color-wit);
-    width: 64.81%;
-    margin: 5rem auto 0 auto;
+    width: 40%;
+    margin: 0 auto 0 auto;
     padding: 64px;
 }
 
