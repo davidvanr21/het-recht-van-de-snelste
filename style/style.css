@@ -87,7 +87,7 @@ a:hover {
 .alignmentLeft {
   width: 70%;
   float: left;
-  background-color: var(--color-groen);
+  /* background-color: var(--color-groen); */
   height: 100vh;
 }
 
@@ -209,6 +209,34 @@ nav img {
 .textScene li {
   margin: 3em 0;
   list-style-type: none;
+}
+
+.sceneHomeColor {
+  background-color: #60E1C7;
+}
+
+.scene1Color {
+  background-color: #F6635C;
+}
+
+.scene2Color {
+  background-color: #373A59;
+}
+
+.scene3Color {
+  background-color: #60E1C7;
+}
+
+.scene4Color {
+  background-color: #60E1C7;
+}
+
+.noXscroll {
+  overflow-x: hidden; 
+}
+
+.actionKey {
+  color: var(--color-rood);
 }
 
 /* ------------------------ terug & lees verder  */
