@@ -7,6 +7,7 @@
 body {
     background-color: var(--color-grijs-tint);
     font-family: lato, sans-serif;
+    /* cursor: none; */
 }
 
 /* Font: Georgoa, got this font from https://www.cdnfonts.com/georgia.font */
@@ -33,20 +34,29 @@ body {
   --color-rood: #df5b57;
 }
 
-/* .noscroll {
+.noscroll {
     overflow-y: hidden; 
-} */
+}
 
 h1 {
     font-size: 36px;
     line-height: 53px;
-    margin-top: 3em;
+    /* margin-top: 3em; */
     color: var(--color-donker);
     font-family: var(--font-heading1);
 }
 
 h2 {
     font-size: 32px;
+    line-height: 47px;
+    font-weight: 400;
+    margin-top: 36px;
+    color: var(--color-donker);
+    font-family: var(--font-heading2);
+}
+
+h3 {
+    font-size: 24px;
     line-height: 47px;
     font-weight: 400;
     margin-top: 36px;
@@ -77,7 +87,7 @@ a:hover {
 .alignmentLeft {
   width: 70%;
   float: left;
-  background-color: var(--color-groen-fel);
+  background-color: var(--color-groen);
   height: 100vh;
 }
 
@@ -164,7 +174,24 @@ nav img {
 
 #startKnop {
   position: absolute;
-  bottom: 10em;
+  bottom: 8em;
+  color: var(--color-donker);
+  padding: 12px 36px;
+  border: 2px solid var(--color-donker);
+  border-radius: 28px;
+  background-color: none;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  font-weight: 700;
+}
+
+#startKnop:hover {
+  text-decoration: none;
+  color: var(--color-wit);
+  background-color: var(--color-donker);
+  padding: 14px 44px;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
 }
 
 .spline-watermark {
@@ -174,16 +201,44 @@ nav img {
 
 /* ------------------------ scenes ------------------------------ */
 
+.textAlginment {
+  margin: 4em;
+  padding-top: 0.5em;
+}
+
 .textScene li {
-  margin: 3em;
+  margin: 3em 0;
   list-style-type: none;
 }
 
-.textScene ol {
-  margin-top: 10em;
+/* ------------------------ terug & lees verder  */
+
+.navigateButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4em;
 }
 
-/* ------------------------ credits.html ------------------------------ */
+.navigateButtons a {
+  color: var(--color-donker);
+  padding: 12px 36px;
+  border: 2px solid var(--color-donker);
+  border-radius: 28px;
+  background-color: none;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  font-weight: 700;
+}
+
+.navigateButtons a:hover {
+  text-decoration: none;
+  color: var(--color-wit);
+  background-color: var(--color-donker);
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ------------------------ over.html ------------------------------ */
 
 .paragraph {
     background-color: var(--color-wit);
@@ -192,13 +247,65 @@ nav img {
     padding: 64px;
 }
 
+.paragraph a {
+  color: var(--color-donker);
+}
+
+.paragraph a:hover{
+  color: var(--color-rood);
+  text-decoration: none;
+}
+
+.paragraph span p {
+  font-size: 14px !important;
+}
+
+
 .paragraph details {
     margin: 16px;
 }
 
-.details_disabled {
+/* .details_disabled {
     color: var(--color-grijs-licht);
     cursor: not-allowed;
     pointer-events: none;
     text-decoration: none;
+} */
+
+li {
+  font-family: var(--font-body);
+  color: var(--color-donker);
+  font-size: 18px;
+  line-height: 32px;
 }
+
+.boeklink {
+  color: var(--color-rood);
+}
+
+summary {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 16px;
+}
+
+summary:hover {
+  color: var(--color-rood);
+  cursor: pointer;
+}
+
+/* .cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-donker);
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+  pointer-events: none;
+} */
+/* custom cursor tutorial: https://www.youtube.com/watch?v=rfpRZ2t_BrQ&t=818s */
+
+/* For scrolling page
+css: transform: translate(-50%, -50%);position: fixed;
+js: cursor.setAttribute("style","top: "+(e.pageY - scrollY)+"px; left: "+(e.pageX)+"px") */
